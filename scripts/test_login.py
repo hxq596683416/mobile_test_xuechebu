@@ -20,9 +20,10 @@ class TestLogin(object):
         self.page_factory.home_page().click_mine()  # 点击我的
         self.page_factory.mine_page().click_login()  # 点击登录注册
         self.page_factory.login_page().input_username("13058070271")  # 输入账号
-        self.page_factory.login_page().input_username("zm4567890")  # 输入密码
+        self.page_factory.login_page().input_password("zm4567890")  # 输入密码
         self.page_factory.login_page().click_login_btn()  # 点击登录
         self.page_factory.login_page().click_con_btn()  # 点击确认
         nick_name = self.page_factory.login_page().get_nick_name()  # 获取昵称
         print("昵称是：", nick_name)
         # 断言判断结果
+        assert 5372 in nick_name
