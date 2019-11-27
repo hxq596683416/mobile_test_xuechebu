@@ -28,4 +28,4 @@ class LoginPage(BasePage):
 
     def get_nick_name(self):
         """获取指定昵称"""
-        self.get_text_func(self.nick_name)
+        return self.get_text_func(self.nick_name)
